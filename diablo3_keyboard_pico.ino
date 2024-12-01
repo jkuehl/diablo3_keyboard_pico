@@ -1,5 +1,5 @@
   // Additional Boards Manager URLs: https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
-  // See https://randomnerdtutorials.com/programming-raspberry-pi-pico-w-arduino-ide/ and switch to Board Pi Pico and compile.
+  // and see https://randomnerdtutorials.com/programming-raspberry-pi-pico-w-arduino-ide/ and switch to Board Pi Pico and compile.
 
   #include <Keyboard.h>
   #include <Mouse.h>
@@ -25,12 +25,13 @@
     // Keep in mind the pull-up means the pushbutton's logic is inverted. It goes
     // HIGH when it's open, and LOW when it's pressed. Turn on pin 13 when the
     // button's pressed, and off when it's not:
-    if (digitalRead(2) == LOW) { Keyboard.print("1");      delay(77); }
-    if (digitalRead(3) == LOW) { Keyboard.print("2");      delay(77); }
-    if (digitalRead(4) == LOW) { Keyboard.print("3");      delay(77); }
-    if (digitalRead(5) == LOW) { Keyboard.print("4");      delay(77); }
-    if (digitalRead(6) == LOW) { Keyboard.print("q");      delay(77); }
     if (digitalRead(7) == LOW) { Keyboard.print("z");      delay(77); }
+    if (digitalRead(6) == LOW) { Keyboard.print("q");      delay(77); }
+    if (digitalRead(5) == LOW) { Keyboard.print("4");      delay(77); }
+    if (digitalRead(4) == LOW) { Keyboard.print("3");      delay(77); }
+    if (digitalRead(3) == LOW) { Keyboard.print("2");      delay(77); }
+    if (digitalRead(2) == LOW) { Keyboard.print("1");      delay(77); }
+    // Sorting is upside down, to have other keys interrupt left and right mouse-click.
     if (digitalRead(0) == LOW) { Mouse.click(MOUSE_LEFT);  delay(77); }
     if (digitalRead(1) == LOW) { Mouse.click(MOUSE_RIGHT); delay(77); }
   }
