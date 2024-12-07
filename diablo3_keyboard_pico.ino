@@ -7,7 +7,6 @@
 #include <Keyboard.h>
 #include <Mouse.h>
 // The board libs include these includes.
-1
 
 void setup() {
   // Make the pin an input and turn on the pullup resistor, so it goes LOW unless connected to ground.
